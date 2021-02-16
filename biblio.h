@@ -10,8 +10,8 @@ typedef T_livre T_tabloDeLivres[CAPACITE_BIBLIO];
 
 typedef struct
 {
-	T_tabloDeLivres etagere;
-	int nbLivres;  //nb de livres actuellement ds la bibliotheque
+    T_tabloDeLivres etagere;
+    int nbLivres;  //nb de livres actuellement ds la bibliotheque
 
 } T_Bibliotheque;
 
@@ -33,6 +33,7 @@ void restituer(T_Bibliotheque * ptrB);
 void title_sort(T_Bibliotheque * ptrB);
 void author_sort(T_Bibliotheque * ptrB);
 void year_sort(T_Bibliotheque * ptrB);
+void swap(T_Bibliotheque * ptrB, int * index1, int * index2);
 
 /* à faire au prochain TP !!!!!!!!!!!
 void lister(T_Bibliotheque * ptrB);

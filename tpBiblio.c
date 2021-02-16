@@ -5,7 +5,7 @@ void lectureFichierTXT();
 
 int menu()
 {
-	int choix;
+    int choix;
 // au programme du TP6 :
 printf("\n\n 1 - ajouter un nouveau livre dans la bibliotheque "); 
 printf("\n 2 - afficher tous les livres de la bibliotheque "); 
@@ -134,7 +134,7 @@ do
             rechercherlivre(&B);
             break;
         }
-    	
+        
         case 4:
         {
             rechercherauteur(&B);

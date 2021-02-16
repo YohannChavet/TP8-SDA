@@ -3,7 +3,7 @@
 
 void saisirLivre(T_livre * ptrL)
 {
-   lireChaine("CODE :", (ptrL->code), MAX);
+    lireChaine("CODE :", (ptrL->code), MAX);
     lireChaine("TITRE :", (ptrL->titre), MAX_TITRE);
     lireChaine("AUTEUR :", (ptrL->auteur), MAX);
     lireChaine("EDITEUR :", (ptrL->editeur), MAX);
