@@ -35,9 +35,9 @@ void author_sort(T_Bibliotheque * ptrB);
 void year_sort(T_Bibliotheque * ptrB);
 void swap(T_Bibliotheque * ptrB, int * index1, int * index2);
 
-/* à faire au prochain TP !!!!!!!!!!!
+void lireDateSysteme(T_Emp *E);
 void lister(T_Bibliotheque * ptrB);
 void retard(T_Bibliotheque * ptrB);
-*/
+
 
 #endif

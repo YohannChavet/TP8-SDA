@@ -1,5 +1,13 @@
 #include "livre.h"
 
+void viderBuffer()
+{
+    int c = 0;
+    while (c != '\n' && c != EOF)
+    {
+        c = getchar();
+    }
+}
 
 void saisirLivre(T_livre * ptrL)
 {
@@ -7,8 +15,11 @@ void saisirLivre(T_livre * ptrL)
     lireChaine("TITRE :", (ptrL->titre), MAX_TITRE);
     lireChaine("AUTEUR :", (ptrL->auteur), MAX);
     lireChaine("EDITEUR :", (ptrL->editeur), MAX);
+    printf("ANNEE : ");
     scanf("%d", &ptrL->annee);
-    lireChaine("EMPRUNTEUR :", (ptrL->emprunteur.nomemprunteur), MAX);
+    viderBuffer();
+    strcpy(ptrL->emprunteur.nomemprunteur, "aucun");
+    //lireChaine("EMPRUNTEUR :", (ptrL->emprunteur.nomemprunteur), MAX);
 }
 
 void afficherLivre(const T_livre *ptrL)
@@ -25,6 +36,15 @@ void afficherLivre(const T_livre *ptrL)
     afficherChaine("EMPRUNTEUR :", (ptrL->emprunteur.nomemprunteur));
     printf(" - ");
     afficherChaine("CODE :", (ptrL->code));
-    printf("\n");
+    printf("\n\n");
 }
+
+void lireSecondSysteme(T_Emp *E)
+{
+
+system("date > ladate"	);
+FILE * fic=NULL;  // pointeur de fichier
+fic=fopen("ladate","r"); //fileOpen en mode 'r'EAD
+}
+
 

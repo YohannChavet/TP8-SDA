@@ -26,13 +26,15 @@ printf("\n 10 - trier les livres (par annee)");
 
 // si les 5 choix (6-10) sont bien codés, changez le type T_Emp et remplacez-le par la structure T_Emp visible dans livre.h
 // vous pourrez alors faire les menus 11,12,etc...
-// printf("\n 11- lister les livres disponibles "); 
-// printf("\n 12 - lister les emprunts en retard "); //on suppose qu'un emprunt dure 7 jours.
-// printf("\n 13 - ... imaginez vous même vos propres fonctionnalités ")
+printf("\n 11- lister les livres disponibles "); 
+printf("\n 12 - lister les emprunts en retard "); //on suppose qu'un emprunt dure 7 jours.
+//printf("\n 13 - lire la date systeme(bonus)");
+//printf("\n 14 - changer la place de livres entre eux(bonus)");
 
 printf("\n 0 - QUITTER");
 printf("\n Votre choix : ");
-scanf("%d[^\n]",&choix);getchar();
+scanf("%d",&choix);
+getchar();
 return choix;
 }
 
@@ -88,10 +90,10 @@ void chargement(T_Bibliotheque *ptrB)
 
 
 
-
 int main() // début de la fonction main
 { 
 int reponse, choice;
+//int dest;
 
 T_Bibliotheque B; 
 init( &B );
@@ -105,6 +107,10 @@ do
 
     switch(choice)
     {
+        case 0 :
+        {
+            break;
+        }
         case  1 :
         {
             reponse = ajouterLivre(   &B  );
@@ -114,7 +120,7 @@ do
             }
             else
             {
-            printf("impossible d ajouter (bibliotheque pleine)\n");
+            printf("impossible d'ajouter (bibliotheque pleine)\n");
             }
             break;
         }
@@ -176,7 +182,7 @@ do
             year_sort(&B);
             break;
         }
-        /*
+        
         case 11:
         {
             lister(&B);
@@ -187,8 +193,19 @@ do
         {
             retard(&B);
             break;
+        }
+        /*
+        case 13:
+        {
+            lireDateSysteme(&B);
+        }
+        case 14:
+        {
+            printf("entrez les livres que vous voulez permuter sous la forme 'X Y' (par exemple pour permuter les livres 1 et 2 entrez '1 2'");
+            scanf("%d %d", &reponse, &dest);
+            getchar();
+            swap(&B, &reponse, &dest);
         }*/
-        
         default:
         {
             printf("Votre valeur n'a aucune correspondance avec celles disponibles.\n");

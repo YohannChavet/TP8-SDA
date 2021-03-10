@@ -40,6 +40,7 @@ else //i<MAX
     lachaine[i-1]='\0';
 
 return lachaine;
+
 } // fin de la fonction lire
 
 
